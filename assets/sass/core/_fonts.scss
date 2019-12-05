@@ -1,14 +1,20 @@
-//@font-face {
-//    font-family: 'UniSansBook';
-//    src: url("assets/fonts/UniSansBook.ttf")
-//}
+@font-face {
+  font-family: 'Greenwich';
+  src: url("assets/fonts/Greenwich-Regular.otf");
+  font-style: normal;
+  font-weight: normal;
+}
 
-//@import url('https://fonts.googleapis.com/css?family=Comfortaa|Lobster&subset=cyrillic');
+@font-face {
+  font-family: 'Greenwich';
+  src: url("assets/fonts/Greenwich-Bold.otf");
+  font-style: normal;
+  font-weight: bold;
+}
 
-//font-family: 'Roboto', sans-serif;
-$font-family-sans-serif: 'Arial', 'Helvetica', sans-serif;
-$font-family-serif: 'Georgia', 'Times New Roman', 'Times', serif;
-$font-family-monospace: 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
+
+$font-family-sans-serif: 'Greenwich', 'Arial', sans-serif;
+$font-family-serif: 'Greenwich', 'Arial', sans-serif;
 
 $fontFamilyOne: $font-family-sans-serif; // titles
 $fontFamilyTwo: $font-family-sans-serif; // body

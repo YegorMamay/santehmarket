@@ -1,115 +1,217 @@
 .logo {
-    &,
-    &-link,
-    &-img {
-        display: inline-block;
-        vertical-align: middle;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  &-desc {
+    font-size: 15px;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .logo {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &-link {
+      display: block;
+      width: 66%;
     }
+
+    &-desc {
+      max-width: 100px;
+    }
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .logo {
+    &-link {
+      border-right: 1px solid $light_text_color;
+    }
+  }
 }
 
 .phone {
+  @extend %reset-list;
+
+  &,
+  &-item {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &-item {
+    margin: 0 5px;
+  }
+
+  &-number {
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.phone-dropdown {
+  @extend %reset-list;
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
     @extend %reset-list;
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    z-index: 5;
+    background: $primary_color_2;
+    padding: 15px;
+    box-shadow: $shadow;
 
-    &,
-    &-item {
-        display: inline-block;
-        vertical-align: middle;
+    & .phone-dropdown__item {
+      margin-bottom: 3px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__button {
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    min-width: 20px;
+    margin-left: 10px;
+    text-align: center;
+
+    &:hover, &:focus {
+      background: transparent;
+      outline: none;
+      box-shadow: none;
+      border: none;
     }
 
-    &-item {
-        margin: 0 5px;
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-bottom: 2px solid $primary_color_1;
+      border-left: 2px solid $primary_color_1;
+      transform: rotate(-45deg);
+      transition: .2s;
+      vertical-align: middle;
+      margin-bottom: 3px;
     }
 
-    &-number {
-        display: inline-block;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
+    &.active {
+      &:after {
+        transform: rotate(135deg);
+        transition: .2s;
+      }
     }
+  }
 }
 
 .social {
-    @extend %reset-list;
+  @extend %reset-list;
 
-    &,
-    &-item {
-        display: inline-block;
-        vertical-align: middle;
+  &,
+  &-item {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &-item {
+    margin: 0 3px;
+  }
+
+  &-link {
+    text-decoration: none;
+    background: $themeColorTwo;
+    color: $primary_color_2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    border-radius: 50%;
+    height: 27px;
+    font-size: 15px;
+
+    &:hover {
+      background: lighten($themeColorTwo, 15%);
+      color: $primary_color_2;
     }
-
-    &-item {
-        margin: 0 5px;
-    }
-
-    &-link {
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        color: $iconColor;
-
-        &:hover {
-            color: $iconColorActive;
-        }
-    }
+  }
 }
 
 .messenger {
-    @extend %reset-list;
+  @extend %reset-list;
 
-    &,
-    &-item {
-        display: inline-block;
-        vertical-align: middle;
+  &,
+  &-item {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &-item {
+    margin: 0 5px;
+  }
+
+  &-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
     }
-
-    &-item {
-        margin: 0 5px;
-    }
-
-    &-link {
-        display: block;
-        text-align: center;
-        text-decoration: none;
-
-        &:hover {
-        }
-    }
+  }
 }
 
 .lang {
-    @extend %reset-list;
+  @extend %reset-list;
 
-    &,
-    &-item {
-        display: inline-block;
-        vertical-align: middle;
+  &,
+  &-item {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &-item {
+    margin: 0 5px;
+
+    a {
+      display: block;
+
+
+      &:after {
+        content: "/";
+        margin-left: 15px;
+      }
+
+      img {
+        height: 15px;
+      }
     }
+  }
 
-    &-item {
-        margin: 0 5px;
-
-        a {
-            display: block;
-
-
-            &:after {
-                content: "/";
-                margin-left: 15px;
-            }
-
-            img {
-                height: 15px;
-            }
-        }
+  &-item:last-child {
+    a {
+      &:after {
+        display: none;
+      }
     }
-
-    &-item:last-child {
-        a {
-            &:after {
-                display: none;
-            }
-        }
-    }
+  }
 }

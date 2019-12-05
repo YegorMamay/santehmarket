@@ -59,6 +59,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "elements/icons";
 @import "elements/custom-scrollbar";
 @import "elements/dinamic-elements";
+@import "elements/custom-buttons";
 
 // BLOCKS
 @import "blocks/header";
@@ -179,4 +180,17 @@ img {
     @media (max-width: 768px) {
         background-image: none;
     }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1600px;
+        &--large {
+            max-width: 1700px;
+        }
+    }
+}
+
+.padding-none {
+    padding: 0;
 }

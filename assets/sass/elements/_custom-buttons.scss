@@ -1,0 +1,37 @@
+$button_bg_color: $themeColorTwo;
+$button_hover_bg_color: lighten($button_bg_color, 15%);
+$button_font_color: #fff;
+$button_border: none;
+$button_border_radius: 5px;
+$button_font_size: 13px;
+$button_padding: 1.5em 2em;
+
+
+.button-main {
+  background: $button_bg_color;
+  color: $button_font_color;
+  border: none;
+  border-radius: $button_border_radius;
+  font-size: $button_font_size;
+  text-transform: uppercase;
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
+  padding: $button_padding;
+  &:hover, &:focus {
+    color: $button_font_color;
+    background: $button_hover_bg_color;
+  }
+
+  &--style {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1430px) {
+  .button-main {
+    &--style {
+      padding: $button_padding;
+    }
+  }
+}

@@ -1,31 +1,104 @@
 .page-header {
-    padding: 10px 0;
-    background-color: $headerBgColor;
-    color: $headerFontColor;
-    box-shadow: $shadow;
+  padding: 10px 0 0;
+  background-color: $headerBgColor;
+  color: $headerFontColor;
+  box-shadow: $shadow;
+
+  &__top-section {
+    background: $primary_color_2;
+    padding: 8px 0 18px;
+
+    & .screen-reader-text {
+      color: $light_text_color;
+      clip: auto;
+      position: relative!important;
+      display: inline-block;
+      width: auto;
+      height: auto;
+      overflow: visible;
+    }
+  }
+
+  &__bottom-section {
+    background: $menuBgColor;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    background: $themeColorTwo;
+    color: $primary_color_2;
+    border-radius: $border_round_radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    margin-right: 8px;
+
+    & i {
+      font-size: 15px;
+    }
+  }
 
 }
 
+@media screen and (min-width: 1350px) {
+  .page-header {
+    &__item-wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (max-width: 1349px) {
+  .page-header {
+    &__item-wrapper {
+      & .button-main {
+        margin-top: 8px;
+        padding: 10px 25px;
+      }
+    }
+  }
+}
+
 .fixed-to-top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    z-index: 33;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  z-index: 33;
 
-    //xs 544
-    @media #{$mobile} {
-        display: none;
-    }
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 
-    //sm 545 - 768
-    @media #{$tablet} {
-        display: none;
-    }
+  //sm 545 - 768
+  @media #{$tablet} {
+    display: none;
+  }
 
-    //md 769 - 1024
-    @media #{$laptop} {
-        display: none;
-    }
+  //md 769 - 1024
+  @media #{$laptop} {
+    display: none;
+  }
 }

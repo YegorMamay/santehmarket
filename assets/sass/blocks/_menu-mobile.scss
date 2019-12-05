@@ -2,8 +2,7 @@
     display: none;
 }
 
-//xs 544
-@media #{$mobile} {
+@media screen and (max-width: 1200px) {
     nav.main-nav {
         display: none;
     }
