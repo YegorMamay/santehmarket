@@ -42,5 +42,7 @@ add_action( 'after_setup_theme', function () {
 		pll_register_string( 'social-google-plus', 'Google Plus', 'Brainworks' );
 		pll_register_string( 'social-odnoklassniki', 'Odnoklassniki', 'Brainworks' );
 		pll_register_string( 'social-title', 'social-title', 'Brainworks' );
+		pll_register_string( 'review-title', 'review-title', 'Brainworks' );
+		pll_register_string( 'review-button-text', 'review-button-text', 'Brainworks' );
 	}
 } );

@@ -23,7 +23,7 @@
         }
         stickFooter(".js-footer", ".js-container");
         anotherHamburgerMenu(".js-menu", ".js-hamburger", ".js-menu-close");
-        buyOneClick(".one-click", '[data-field-id="field11"]', "h1.single-title");
+        buyOneClick(".one-click", '[data-field-id="field7"]', "h1.page-name");
         $d.on("copy", addLink);
         $w.on("resize", function() {
             if ($w.innerWidth() >= 630) {
@@ -66,9 +66,9 @@
                 autoplay: false,
                 autoplaySpeed: 3e3,
                 arrows: true,
-                prevArrow: '<button type="button" class="slick-prev">&lsaquo;</button>',
-                nextArrow: '<button type="button" class="slick-next">&rsaquo;</button>',
-                dots: false,
+                prevArrow: '<button type="button" class="slick-prev"><svg class="slick-icon"><use xlink:href="#arrow-left"></use></svg></button>',
+                nextArrow: '<button type="button" class="slick-next"><svg class="slick-icon"><use xlink:href="#arrow-right"></use></svg></button>',
+                dots: true,
                 dotsClass: "slick-dots",
                 draggable: true,
                 fade: false,

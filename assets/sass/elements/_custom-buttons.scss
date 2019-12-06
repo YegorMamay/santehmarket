@@ -18,7 +18,9 @@ $button_padding: 1.5em 2em;
   font-weight: bold;
   padding: $button_padding;
   cursor: pointer;
+  @extend %smooth_animation;
   &:hover, &:focus {
+    @extend %smooth_animation;
     color: $button_font_color;
     background: $button_hover_bg_color;
   }
@@ -26,6 +28,11 @@ $button_padding: 1.5em 2em;
   &--style {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  &--single {
+    margin-top: 15px;
+    min-width: 230px;
   }
 }
 
