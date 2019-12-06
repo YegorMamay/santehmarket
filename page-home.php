@@ -8,11 +8,43 @@
 <?php get_template_part('loops/content', 'home'); ?>
 
     <?php $thumb_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumb'); $title = get_the_title($post->ID); ?>
-    <div class="top-section" style="background: url('<?= $thumb_url[0]; ?>')">
+    <div class="top-section" style="background: url('<?= $thumb_url[0]; ?>') no-repeat">
         <div class="top-section__description">
             <h1 class="top-section__title"><?php echo get_post_meta(get_the_ID(), 'home_title', true); ?></h1>
             <div class="top-section__text"><?php echo get_post_meta(get_the_ID(), 'home_description', true); ?></div>
             <button type="button" class="button-main button-main--single js-info"><?php pll_e('button-info'); ?></button>
+        </div>
+    </div>
+
+    <div class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-6">
+                    <p class="main-title h3"><?php echo get_post_meta(get_the_ID(), 'home_about_title', true); ?></p>
+                    <div class="about-section__description"><?php echo get_post_meta(get_the_ID(), 'home_about', true); ?></div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-6">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block-special">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-12 col-lg-6">
+                    <?php
+                    $attachment_id = get_post_meta(get_the_ID(), 'special_bg', true);
+                    $attachment_element = wp_get_attachment_url($attachment_id);
+                    ?>
+                    <div class="block-special__bg" style="background: url('<?php echo $attachment_element; ?>') no-repeat center / cover"></div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-6">
+                    <div><?php echo get_post_meta(get_the_ID(), 'special_title', true); ?></div>
+                    <div><?php echo get_post_meta(get_the_ID(), 'special_description', true); ?></div>
+                </div>
+            </div>
         </div>
     </div>
 

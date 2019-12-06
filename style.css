@@ -13024,6 +13024,40 @@ hr.style-two {
   }
 }
 
+.about-section {
+  padding: 7% 0 4%;
+  width: 100%;
+}
+
+.about-section__description {
+  margin: 15px 0;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.about-section .main-title {
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .about-section__description {
+    font-size: 20px;
+  }
+  .about-section .main-title {
+    text-align: left;
+  }
+}
+
+.block-special {
+  background: #0151c9;
+  margin: 5% 0 8%;
+}
+
+.block-special__bg {
+  min-height: 180px;
+  background-size: cover;
+}
+
 ::-moz-selection {
   text-shadow: none;
   color: #fff;
