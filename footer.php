@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer js-footer">
     <?php if (is_active_sidebar('footer-widget-area')) : ?>
         <div class="pre-footer">
             <div class="container">
@@ -48,9 +48,9 @@
                                 <?php echo do_shortcode('[bw-phone]'); ?>
                             </div>
                         </div>
-                        <div class="footer__field">
+                        <div class="footer__field footer--centered">
                             <div class="footer__sub-title">
-                                <?php pll_e('123') ?>
+                                <?php pll_e('social-title'); ?>
                             </div>
                             <div class="footer__description">
                                 <?php echo do_shortcode('[bw-social]'); ?>

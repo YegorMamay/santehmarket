@@ -133,12 +133,22 @@
 
     <!-- Mobile menu start-->
     <div class="nav-mobile-header">
+        <div class="logo">
+            <?php get_default_logo_link([
+                'name'    => 'logo-footer.svg',
+                'options' => [
+                    'class'  => 'logo-img',
+                    'width'  => 200,
+                    'height' => 50,
+                ],
+            ])
+            ?>
+        </div>
         <button class="hamburger js-hamburger" type="button" tabindex="0">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
         </button>
-        <div class="logo"><?php get_default_logo_link(); ?></div>
     </div>
     <?php if (has_nav_menu('main-nav')) { ?>
         <nav class="nav js-menu hide-on-desktop">

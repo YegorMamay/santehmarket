@@ -17,6 +17,7 @@ $button_padding: 1.5em 2em;
   font-family: $font-family-sans-serif;
   font-weight: bold;
   padding: $button_padding;
+  cursor: pointer;
   &:hover, &:focus {
     color: $button_font_color;
     background: $button_hover_bg_color;
