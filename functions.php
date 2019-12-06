@@ -44,5 +44,8 @@ add_action( 'after_setup_theme', function () {
 		pll_register_string( 'social-title', 'social-title', 'Brainworks' );
 		pll_register_string( 'review-title', 'review-title', 'Brainworks' );
 		pll_register_string( 'review-button-text', 'review-button-text', 'Brainworks' );
+		pll_register_string( 'articles-title', 'articles-title', 'Brainworks' );
+		pll_register_string( 'articles-button-text', 'articles-button-text', 'Brainworks' );
+		pll_register_string( 'button-info', 'button-info', 'Brainworks' );
 	}
 } );

@@ -8,62 +8,6 @@
             </div>
         </div><!-- .pre-footer end-->
     <?php endif; ?>
-    <div class="footer__bg">
-        <div class="container-fluid padding-none">
-            <div class="footer__wrapper">
-                <div class="footer__column">
-                    <div class="footer__logo">
-                        <?php get_default_logo_link([
-                            'name'    => 'logo-footer.svg',
-                            'options' => [
-                                'class'  => 'logo-img',
-                                'width'  => 200,
-                                'height' => 50,
-                            ],
-                        ])
-                        ?>
-                    </div>
-                    <div class="footer__list">
-                        <div class="footer__field">
-                            <div class="footer__icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="footer__description">
-                                <?php pll_e('Address') ?>
-                            </div>
-                        </div>
-                        <div class="footer__field">
-                            <div class="footer__icon">
-                                <i class="far fa-clock"></i>
-                            </div>
-                            <div class="footer__description">
-                                <?php pll_e('Work Schedule') ?>
-                            </div>
-                        </div>
-                        <div class="footer__field">
-                            <div class="footer__icon">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <div class="footer__description">
-                                <?php echo do_shortcode('[bw-phone]'); ?>
-                            </div>
-                        </div>
-                        <div class="footer__field footer--centered">
-                            <div class="footer__sub-title">
-                                <?php pll_e('social-title'); ?>
-                            </div>
-                            <div class="footer__description">
-                                <?php echo do_shortcode('[bw-social]'); ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__map-wrapper">
-                    <iframe width="994" height="754" id="gmap_canvas" src="https://maps.google.com/maps?q=%D0%B8%D1%80%D0%BF%D0%B5%D0%BD%D1%8C&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="container">
         <div class="copyright">
             <div class="date">&copy; <?php echo date('Y'); ?>. Все права защищены</div>
@@ -83,13 +27,15 @@
 <?php wp_footer(); ?>
 
 <!-- custom arrows -->
-<svg width="0" height="0" class="hidden">
-    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.711 25.333" id="arrow-left">
-        <path d="M15.711 25.333L0 13.158 15.711 0 9.819 12.667z"></path>
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.711 25.333" id="arrow-right">
-        <path d="M0 25.333l15.711-12.175L0 0l5.891 12.667z"></path>
-    </symbol>
-</svg>
+<div style="display: none">
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.711 25.333" id="arrow-left">
+            <path d="M15.711 25.333L0 13.158 15.711 0 9.819 12.667z"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.711 25.333" id="arrow-right">
+            <path d="M0 25.333l15.711-12.175L0 0l5.891 12.667z"></path>
+        </symbol>
+    </svg>
+</div>
 </body>
 </html>

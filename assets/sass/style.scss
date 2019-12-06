@@ -67,6 +67,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "blocks/menu-mobile";
 @import "blocks/sidebar";
 @import "blocks/footer";
+@import "blocks/top-section";
 
 ::selection {
     text-shadow: none;
@@ -111,7 +112,13 @@ body {
     position: relative;
     overflow-x: hidden;
     min-height: 100%;
-    padding-top: 80px;
+    padding-top: 136px;
+}
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        padding-top: 62px;
+    }
 }
 
 b,
@@ -193,4 +200,9 @@ img {
 
 .padding-none {
     padding: 0;
+}
+
+.responsive-wrapper {
+    padding: 4% 0;
+    margin: 15px 0;
 }

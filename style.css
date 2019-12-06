@@ -127,7 +127,7 @@ q:after {
   content: none;
 }
 
-.review-social, .review-slider .slick-arrow, .slick-dots li button, .slick-dots li button:hover, a, .button-main, .button-main:hover, .button-main:focus, .nav .menu-link, .nav .sub-menu, .nav .sub-menu-link, .svg-icon {
+.review-social, .review-slider .slick-icon, .review-slider .slick-icon:hover, .review-slider .slick-arrow, .slick-dots li button, .slick-dots li button:hover, a, .button-main, .button-main:hover, .button-main:focus, .button-simple, .button-simple:hover, .button-simple:focus, .nav .menu-link, .nav .sub-menu, .nav .sub-menu-link, .svg-icon {
   -webkit-transition: .2s;
   transition: .2s;
 }
@@ -9299,7 +9299,7 @@ table th[class*="col-"] {
   clear: both;
 }
 
-.review-social, .review-slider .slick-arrow, .slick-dots li button, .slick-dots li button:hover, a, .button-main, .button-main:hover, .button-main:focus, .nav .menu-link, .nav .sub-menu, .nav .sub-menu-link, .svg-icon {
+.review-social, .review-slider .slick-icon, .review-slider .slick-icon:hover, .review-slider .slick-arrow, .slick-dots li button, .slick-dots li button:hover, a, .button-main, .button-main:hover, .button-main:focus, .button-simple, .button-simple:hover, .button-simple:focus, .nav .menu-link, .nav .sub-menu, .nav .sub-menu-link, .svg-icon {
   -webkit-transition: .2s;
   transition: .2s;
 }
@@ -9894,7 +9894,7 @@ select {
   }
 }
 
-.review-social, .review-slider .slick-arrow, .slick-dots li button, .slick-dots li button:hover, a, .button-main, .button-main:hover, .button-main:focus, .nav .menu-link, .nav .sub-menu, .nav .sub-menu-link, .svg-icon {
+.review-social, .review-slider .slick-icon, .review-slider .slick-icon:hover, .review-slider .slick-arrow, .slick-dots li button, .slick-dots li button:hover, a, .button-main, .button-main:hover, .button-main:focus, .button-simple, .button-simple:hover, .button-simple:focus, .nav .menu-link, .nav .sub-menu, .nav .sub-menu-link, .svg-icon {
   -webkit-transition: .2s;
   transition: .2s;
 }
@@ -10791,16 +10791,16 @@ ol.commentlist .comment-body {
 }
 
 .front-news-box {
-  -webkit-box-shadow: 0 0 10px rgba(70, 67, 88, 0.2);
-  box-shadow: 0 0 10px rgba(70, 67, 88, 0.2);
-  border: 1px solid white;
   -webkit-transition: .2s;
   transition: .2s;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .front-news-box:hover {
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  -webkit-box-shadow: 0 0 10px rgba(70, 67, 88, 0.2);
+  box-shadow: 0 0 10px rgba(70, 67, 88, 0.2);
 }
 
 .front-news-inner {
@@ -10812,8 +10812,16 @@ ol.commentlist .comment-body {
 }
 
 .front-news-headline {
-  font-size: 28px;
+  font-size: 18px;
   margin-bottom: 10px;
+}
+
+.front-news-headline:hover a {
+  text-decoration: none;
+}
+
+.front-news-headline a {
+  text-decoration: underline;
 }
 
 .front-news-preview {
@@ -10839,6 +10847,34 @@ ol.commentlist .comment-body {
   font-size: 16px;
   line-height: 1.5;
   color: #464358;
+}
+
+.blog-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 600px) {
+  .blog-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .blog-section .main-title {
+    margin-bottom: 10px;
+  }
 }
 
 .review-wrapper {
@@ -12021,6 +12057,7 @@ hr.style-two {
   font-weight: bold;
   padding: 1.5em 2em;
   cursor: pointer;
+  text-align: center;
 }
 
 .button-main:hover, .button-main:focus {
@@ -12042,6 +12079,25 @@ hr.style-two {
   .button-main--style {
     padding: 1.5em 2em;
   }
+}
+
+.button-simple {
+  background: #ffffff;
+  color: #464358;
+  border: 1px solid #0151c9;
+  border-radius: 5px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: "Greenwich", "Arial", sans-serif;
+  font-weight: bold;
+  padding: 1.2em 4em;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button-simple:hover, .button-simple:focus {
+  color: #fff;
+  background: #0151c9;
 }
 
 .page-header {
@@ -12726,6 +12782,10 @@ hr.style-two {
   margin: 0 auto;
 }
 
+.footer__bg .logo-link {
+  border: 0;
+}
+
 .footer__map-wrapper {
   background-color: #ffffff;
   width: 60%;
@@ -12889,6 +12949,81 @@ hr.style-two {
   }
 }
 
+.top-section {
+  width: 100%;
+  max-width: 1700px;
+  min-height: 700px;
+  margin: 0 auto;
+  position: relative;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.top-section__image {
+  width: 100%;
+  max-width: 100%;
+}
+
+.top-section__description {
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 15px;
+}
+
+.top-section__title {
+  max-width: 650px;
+  font-size: 36px;
+}
+
+.top-section__text {
+  max-width: 650px;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 3%;
+}
+
+@media screen and (max-width: 992px) {
+  .top-section {
+    min-height: 450px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .top-section {
+    min-height: 400px;
+  }
+  .top-section__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .top-section__title {
+    font-size: 24px;
+    text-align: center;
+  }
+  .top-section__text {
+    text-align: center;
+  }
+}
+
 ::-moz-selection {
   text-shadow: none;
   color: #fff;
@@ -12932,7 +13067,13 @@ body {
   position: relative;
   overflow-x: hidden;
   min-height: 100%;
-  padding-top: 80px;
+  padding-top: 136px;
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    padding-top: 62px;
+  }
 }
 
 b,
@@ -13023,4 +13164,9 @@ img {
 
 .padding-none {
   padding: 0;
+}
+
+.responsive-wrapper {
+  padding: 4% 0;
+  margin: 15px 0;
 }

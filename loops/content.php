@@ -7,7 +7,7 @@
                                 <?php the_post_thumbnail('large'); ?>
                         </div>
                         <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                <h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
+                                <div class="h6"><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></div>
                                 <div class="sp-xs-1"></div>
                                 <p><?php the_excerpt(); ?></p>
                                 <?php /*
@@ -23,7 +23,7 @@
                         </p>
                     */ ?>
                             <div class="sp-xs-2"></div>
-                            <a class="btn btn-secondary btn-sm"
+                            <a class="button-main button-main--single" style="display: inline-block"
                                href="<?php echo get_permalink(); ?>"><?php _e('Continue reading', 'brainworks') ?> <i
                                         class="glyphicon glyphicon-arrow-right"></i></a>
                         </div>

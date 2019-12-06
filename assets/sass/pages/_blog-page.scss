@@ -4,12 +4,13 @@
     }
 
     &-box {
-        box-shadow: $shadow;
-        border: 1px solid $borderColor;
         @include smooth_animation;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
     
         &:hover {
-            box-shadow: none;
+            box-shadow: $shadow;
         }
     }
 
@@ -22,11 +23,14 @@
     }
 
     &-headline {
-        font-size: 28px;
+        font-size: 18px;
         margin-bottom: 10px;
+        &:hover a {
+            text-decoration: none;
+        }
 
         a {
-
+            text-decoration: underline;
         }
     }
 
@@ -52,6 +56,23 @@
             font-size: 16px;
             line-height: 1.5;
             color: $bodyFontColor;
+        }
+    }
+}
+
+.blog-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 600px) {
+    .blog-section {
+        flex-direction: column;
+        justify-content: center;
+        & .main-title {
+            margin-bottom: 10px;
         }
     }
 }
