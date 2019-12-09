@@ -70,6 +70,43 @@
         </div>
     </div>
 
+    <div class="product-categories">
+        <div class="container">
+            <div class="row align-items-center">
+                <?php
+                global $post;
+                $args = array(
+                    'post_type'=> 'product_categories',
+                    'publish' => true,
+                    'posts_per_page' => 25
+                );
+                $products_item = get_posts($args);
+                foreach ($products_item as $post) {
+                    ?>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="product-categories__item">
+                            <div class="product-categories__strips"></div>
+                            <?php the_post_thumbnail('full', array('class' => 'product-categories__image')); ?>
+                            <div class="product-categories__title"><?php the_title(); ?></div>
+                        </div>
+                    </div>
+                    <?php
+                }
+
+                wp_reset_postdata();
+                ?>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="product-categories__item product-categories--style">
+                        <button class="product-categories__button" type="button">
+                            <?php pll_e('product-availability'); ?>
+                            <svg class="product-categories__arrow"><use xlink:href="#arrow-right"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="review-wrapper">
        <div class="container">
            <p class="main-title h3 text-center"><?php pll_e('review-title'); ?></p>

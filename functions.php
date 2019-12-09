@@ -48,6 +48,7 @@ add_action( 'after_setup_theme', function () {
 		pll_register_string( 'articles-button-text', 'articles-button-text', 'Brainworks' );
 		pll_register_string( 'button-info', 'button-info', 'Brainworks' );
 		pll_register_string( 'button-special-text', 'button-special-text', 'Brainworks' );
+		pll_register_string( 'product-availability', 'product-availability', 'Brainworks' );
 	}
 } );
 
@@ -81,5 +82,38 @@ function my_custom_benefits(){
         'hierarchical'       => false,
         'menu_position'      => null,
         'supports'           => array('title')
+    ) );
+}
+
+//Категории товаров
+add_action('init', 'product_categories');
+function product_categories(){
+    register_post_type('product_categories', array(
+        'labels'             => array(
+            'name'               => 'Категории товаров',
+            'singular_name'      => 'Категория товара',
+            'add_new'            => 'Добавить новый блок',
+            'add_new_item'       => 'Добавить новый блок',
+            'edit_item'          => 'Редактировать блок',
+            'new_item'           => 'Новый блок',
+            'view_item'          => 'Посмотреть блок',
+            'search_items'       => 'Найти блок',
+            'not_found'          =>  'Блоков не найдено',
+            'not_found_in_trash' => 'В корзине блоков не найдено',
+            'parent_item_colon'  => '',
+            'menu_name'          => 'Категории товаров'
+
+        ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => true,
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array('title', 'thumbnail')
     ) );
 }
