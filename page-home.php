@@ -31,18 +31,20 @@
     </div>
 
     <div class="block-special">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-12 col-lg-6">
-                    <?php
-                    $attachment_id = get_post_meta(get_the_ID(), 'special_bg', true);
-                    $attachment_element = wp_get_attachment_url($attachment_id);
-                    ?>
-                    <div class="block-special__bg" style="background: url('<?php echo $attachment_element; ?>') no-repeat center / cover"></div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-6">
-                    <div><?php echo get_post_meta(get_the_ID(), 'special_title', true); ?></div>
-                    <div><?php echo get_post_meta(get_the_ID(), 'special_description', true); ?></div>
+        <?php
+        $attachment_id = get_post_meta(get_the_ID(), 'special_bg', true);
+        $attachment_element = wp_get_attachment_url($attachment_id);
+        ?>
+        <div class="block-special__bg" style="background: url('<?php echo $attachment_element; ?>') no-repeat center / cover">
+            <div class="container">
+                <div class="block-special__wrapper">
+                    <div class="block-special__item-wrapper">
+                        <div class="block-special__description">
+                            <p class="block-special__title"><?php echo get_post_meta(get_the_ID(), 'special_title', true); ?></p>
+                            <div class="block-special__sub-title"><?php echo get_post_meta(get_the_ID(), 'special_description', true); ?></div>
+                        </div>
+                        <button type="button" class="block-special__button"><?php pll_e('button-special-text'); ?></button>
+                    </div>
                 </div>
             </div>
         </div>
