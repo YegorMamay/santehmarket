@@ -72,6 +72,8 @@
 
     <div class="product-categories">
         <div class="container">
+            <p class="main-title h3 text-center"><?php echo get_post_meta(get_the_ID(), 'categories_title', true); ?></p>
+            <div class="product-categories__sub-title"><?php echo get_post_meta(get_the_ID(), 'categories_description', true); ?></div>
             <div class="row align-items-center">
                 <?php
                 global $post;
@@ -104,6 +106,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="brand-slider">
+        <div class="container">
+            <?php echo do_shortcode('[show-logos]'); ?>
         </div>
     </div>
 

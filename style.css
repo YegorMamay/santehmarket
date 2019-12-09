@@ -13278,6 +13278,13 @@ hr.style-two {
   font-weight: 700;
 }
 
+.product-categories__sub-title {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5%;
+}
+
 .product-categories__button {
   color: #ffffff;
   border: none;
@@ -13481,4 +13488,35 @@ img {
 .responsive-wrapper {
   padding: 4% 0;
   margin: 15px 0;
+}
+
+.brand-slider {
+  margin-top: 2%;
+  margin-bottom: 6%;
+}
+
+.bx-wrapper .bx-prev {
+  text-indent: unset !important;
+  background: none !important;
+}
+
+.bx-wrapper .bx-prev:hover .bx-icon {
+  fill: #1974fe;
+}
+
+.bx-wrapper .bx-next {
+  text-indent: unset !important;
+  background: none !important;
+}
+
+.bx-wrapper .bx-next:hover .bx-icon {
+  fill: #1974fe;
+}
+
+.bx-icon {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  fill: #0151c9;
+  padding: 3px;
 }
