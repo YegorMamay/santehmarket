@@ -1,0 +1,47 @@
+.benefits {
+  padding-top: 60px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  &__item {
+    width: 50%;
+    padding: 0 15px;
+    min-height: 95px;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    color: $themeColorTwo;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__description {
+    margin-top: 8px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .benefits {
+    padding-left: 10%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .benefits {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    &__item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  }
+}

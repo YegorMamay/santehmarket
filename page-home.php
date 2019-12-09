@@ -24,7 +24,27 @@
                     <div class="about-section__description"><?php echo get_post_meta(get_the_ID(), 'home_about', true); ?></div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-6">
+                    <div class="benefits">
+                        <?php
+                        global $post;
+                        $args = array(
+                            'post_type'=> 'benefits',
+                            'publish' => true,
+                            'posts_per_page' => 20
+                        );
+                        $benefits_item = get_posts($args);
+                        foreach ($benefits_item as $post) {
+                            ?>
+                            <div class="benefits__item">
+                                <p class="benefits__title"><?php the_title(); ?></p>
+                                <div class="benefits__description"><?php echo get_post_meta(get_the_ID(), 'benefits_description', true); ?></div>
+                            </div>
+                            <?php
+                        }
 
+                        wp_reset_postdata();
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
