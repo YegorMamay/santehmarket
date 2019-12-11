@@ -192,7 +192,7 @@
                     </div>
                 </div>
                 <div class="footer__map-wrapper">
-                    <iframe width="994" height="754" id="gmap_canvas" src="https://maps.google.com/maps?q=%D0%B8%D1%80%D0%BF%D0%B5%D0%BD%D1%8C&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <iframe width="994" height="754" id="gmap_canvas" src="<?php echo get_post_meta(get_the_ID(), 'google_map', true); ?>" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                 </div>
             </div>
         </div>
