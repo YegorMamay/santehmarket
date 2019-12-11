@@ -10796,11 +10796,15 @@ ol.commentlist .comment-body {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  -webkit-box-shadow: 0 0 10px rgba(70, 67, 88, 0.2);
+  box-shadow: 0 0 10px rgba(70, 67, 88, 0.2);
 }
 
 .front-news-box:hover {
-  -webkit-box-shadow: 0 0 10px rgba(70, 67, 88, 0.2);
-  box-shadow: 0 0 10px rgba(70, 67, 88, 0.2);
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .front-news-inner {
@@ -12055,6 +12059,15 @@ hr.style-two {
   text-transform: uppercase;
   font-family: "Greenwich", "Arial", sans-serif;
   font-weight: bold;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 1.5em 2em;
   cursor: pointer;
   text-align: center;
@@ -13025,7 +13038,7 @@ hr.style-two {
 }
 
 .about-section {
-  padding: 7% 0 4%;
+  padding: 10% 0 4%;
   width: 100%;
 }
 

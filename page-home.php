@@ -7,16 +7,19 @@
 <div class="container-fluid padding-none">
 <?php get_template_part('loops/content', 'home'); ?>
 
-    <?php $thumb_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumb'); $title = get_the_title($post->ID); ?>
-    <div class="top-section" style="background: url('<?= $thumb_url[0]; ?>') no-repeat">
+    <?php
+    $attachment_elem_id = get_post_meta(get_the_ID(), 'first_screen_img', true);
+    $attachment_image = wp_get_attachment_url($attachment_elem_id);
+    ?>
+    <div class="top-section" style="background: url('<?php echo $attachment_image; ?>') no-repeat">
         <div class="top-section__description">
             <h1 class="top-section__title"><?php echo get_post_meta(get_the_ID(), 'home_title', true); ?></h1>
             <div class="top-section__text"><?php echo get_post_meta(get_the_ID(), 'home_description', true); ?></div>
-            <button type="button" class="button-main button-main--single js-info"><?php pll_e('button-info'); ?></button>
+            <a href="#about" type="button" class="button-main button-main--single js-info"><?php pll_e('button-info'); ?></a>
         </div>
     </div>
 
-    <div class="about-section">
+    <div class="about-section" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-6">
@@ -63,14 +66,14 @@
                             <p class="block-special__title"><?php echo get_post_meta(get_the_ID(), 'special_title', true); ?></p>
                             <div class="block-special__sub-title"><?php echo get_post_meta(get_the_ID(), 'special_description', true); ?></div>
                         </div>
-                        <button type="button" class="block-special__button"><?php pll_e('button-special-text'); ?></button>
+                        <button type="button" class="block-special__button js-details"><?php pll_e('button-special-text'); ?></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="product-categories">
+    <div class="product-categories" id="category">
         <div class="container">
             <p class="main-title h3 text-center"><?php echo get_post_meta(get_the_ID(), 'categories_title', true); ?></p>
             <div class="product-categories__sub-title"><?php echo get_post_meta(get_the_ID(), 'categories_description', true); ?></div>
@@ -98,7 +101,7 @@
                 wp_reset_postdata();
                 ?>
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                    <div class="product-categories__item product-categories--style">
+                    <div class="product-categories__item product-categories--style js-availability">
                         <button class="product-categories__button" type="button">
                             <?php pll_e('product-availability'); ?>
                             <svg class="product-categories__arrow"><use xlink:href="#arrow-right"></use></svg>
@@ -109,13 +112,13 @@
         </div>
     </div>
 
-    <div class="brand-slider">
+    <div class="brand-slider" id="brands">
         <div class="container">
             <?php echo do_shortcode('[show-logos]'); ?>
         </div>
     </div>
 
-    <div class="review-wrapper">
+    <div class="review-wrapper" id="reviews">
        <div class="container">
            <p class="main-title h3 text-center"><?php pll_e('review-title'); ?></p>
            <?php echo do_shortcode('[bw-reviews] '); ?>
@@ -127,7 +130,7 @@
        </div>
     </div>
 
-    <div class="responsive-wrapper">
+    <div class="responsive-wrapper" id="news">
         <div class="container">
             <div class="blog-section">
                 <p class="main-title h3"><?php pll_e('articles-title'); ?></p>
@@ -138,7 +141,7 @@
         </div>
     </div>
 
-    <div class="footer__bg">
+    <div class="footer__bg" id="contacts">
         <div class="container-fluid padding-none">
             <div class="footer__wrapper">
                 <div class="footer__column">
