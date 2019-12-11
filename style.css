@@ -10825,7 +10825,7 @@ ol.commentlist .comment-body {
 }
 
 .front-news-headline a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .front-news-preview {
@@ -12791,7 +12791,7 @@ hr.style-two {
 .footer__bg {
   background: #0141a2;
   width: 100%;
-  max-width: 1700px;
+  max-width: 1920px;
   margin: 0 auto;
 }
 
@@ -12964,7 +12964,7 @@ hr.style-two {
 
 .top-section {
   width: 100%;
-  max-width: 1700px;
+  max-width: 1920px;
   min-height: 700px;
   margin: 0 auto;
   position: relative;
@@ -13074,7 +13074,7 @@ hr.style-two {
   align-items: center;
   min-height: 180px;
   width: 100%;
-  max-width: 1700px;
+  max-width: 1920px;
   margin: 0 auto;
 }
 
