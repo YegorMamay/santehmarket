@@ -409,7 +409,7 @@
                     const el = $(adaptiveHref);
                     if (el.length) {
                         $('html, body').animate({
-                            scrollTop: el.offset().top
+                            scrollTop: el.offset().top - 180
                         }, animationSpeed);
                     }
                 });
