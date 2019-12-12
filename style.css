@@ -11912,6 +11912,9 @@ hr.style-two {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .phone-dropdown__list {
@@ -11921,7 +11924,9 @@ hr.style-two {
   left: 0;
   z-index: 5;
   background: #ffffff;
-  padding: 15px;
+  padding: 15px 0;
+  min-width: 100%;
+  width: auto;
   -webkit-box-shadow: 0 0 10px rgba(70, 67, 88, 0.2);
   box-shadow: 0 0 10px rgba(70, 67, 88, 0.2);
 }

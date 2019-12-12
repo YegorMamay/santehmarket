@@ -65,6 +65,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   &__list {
@@ -75,7 +76,9 @@
     left: 0;
     z-index: 5;
     background: $primary_color_2;
-    padding: 15px;
+    padding: 15px 0;
+    min-width: 100%;
+    width: auto;
     box-shadow: $shadow;
 
     & .phone-dropdown__item {
