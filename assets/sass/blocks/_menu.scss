@@ -29,6 +29,9 @@
 
         a {
           color: $menuFontColorActive;
+          &.sub-menu-link {
+            color: $themeColorOne;
+          }
         }
       }
 
@@ -138,11 +141,11 @@
     left: 0;
     z-index: 33;
     width: 250px;
-    background-color: $menuBgColorActive;
+    background-color: $light_bg_color;
     visibility: hidden;
     text-align: left;
     opacity: 0;
-    box-shadow: 0 5px 20px rgba(#000, .2);
+    box-shadow: 0 10px 20px rgba(#000, .2);
     @extend %smooth_animation;
 
     &-item {
@@ -173,7 +176,7 @@
       .no-touch &:hover,
       &-current {
         > .sub-menu-link {
-          background-color: $menuMobileSubMenuBGOnHover;
+          background-color: transparent;
           color: $menuFontColorActive;
         }
       }
@@ -191,7 +194,7 @@
       display: block;
       padding: 9px 15px;
       color: $menuFontColor;
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.3;
       text-decoration: none;
       @extend %smooth_animation;

@@ -64,9 +64,14 @@
 
             &-item {
                 display: block;
+                padding: 5px 0;
+
+                &:hover a {
+                    color: lighten($themeColorTwo, 45%);
+                }
 
                 &-has-children {
-                    padding-right: 5px;
+                    padding-right: 0;
                 }
 
                 &::after {
@@ -123,11 +128,11 @@
             width: auto;
             display: none;
             visibility: visible;
-            background-color: $menuMobileSubMenuBGColor;
+            background-color: $primary_color_2;
             opacity: 1;
             box-shadow: none;
             transition: none;
-
+            padding: 5px 0;
             &-item {
                 &::after {
                     display: none;
@@ -147,8 +152,9 @@
             }
 
             &-link {
-                color: $menuMobileSubMenuTextColor;
+                color: $themeColorOne;
                 font-size: $menuMobileSubMenuLinkFontSize;
+                text-align: center;
             }
         }
     }
